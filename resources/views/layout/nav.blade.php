@@ -34,7 +34,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{url('/login')}}">Login</a>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="{{url("logout")}}">Logout</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Register</a>
                     </div>

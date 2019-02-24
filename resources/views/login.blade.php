@@ -5,7 +5,8 @@
 @section('content')
     <div class="container-fluid">
         <div class="col-md-6 offset-3">
-            <h1 class="text-center m-5 text-primary">Login Here</h1>
+            @include('layout.errors')
+            <h1 class="text-center my-5 text-primary">Login Here</h1>
             <form method="post" action="{{url('/login')}}">
                 {{csrf_field()}}
                 <div class="form-group">

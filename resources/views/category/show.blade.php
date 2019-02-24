@@ -19,12 +19,12 @@
                 <tr>
                     <th scope="row">{{$category->id}}</th>
                     <td>{{$category->name}}</td>
-                    @if($category->parent ==1)
+                    @if($category->parent ==0)
+                        <td>yes</td>
+                    @elseif($category->parent ==1)
                         <td>Income</td>
                     @elseif($category->parent ==2)
-                        <td>expense</td>
-                    @else
-                        <td>yes</td>
+                        <td>Expense</td>
                     @endif
                     <td>{{$category->created_at}}</td>
                     <td>{{$category->updated_at}}</td>

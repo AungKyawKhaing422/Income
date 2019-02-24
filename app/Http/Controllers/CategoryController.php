@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -16,8 +15,8 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-
         return view('category.show', compact('categories'));
+
     }
 
     /**
@@ -25,13 +24,15 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public
+    function create()
     {
         $categories = Category::all();
         return view('category.create', compact('categories'));
     }
 
-    public function insert(Request $request)
+    public
+    function insert(Request $request)
     {
         Category::create([
             "name" => $request->name,
@@ -46,7 +47,8 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public
+    function store(Request $request)
     {
         //
     }
@@ -57,7 +59,8 @@ class CategoryController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public
+    function show($id)
     {
         //
     }
@@ -68,7 +71,8 @@ class CategoryController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public
+    function edit($id)
     {
         $category = Category::find($id);
         $categories = Category::all();
@@ -82,7 +86,8 @@ class CategoryController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public
+    function update(Request $request, $id)
     {
         $category = Category::find($id);
         $category->name = $request->get('name');
@@ -98,7 +103,8 @@ class CategoryController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public
+    function destroy($id)
     {
         $category = Category::find($id);
         $category->delete();
