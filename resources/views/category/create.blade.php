@@ -8,7 +8,7 @@
                 @if(session('status'))
                     <p class="alert alert-success">{{session('status')}}</p>
                 @endif
-                <h1 class="text-center text-dark">Category Creation</h1>
+                <h1 class="text-center text-dark my-5">Category Creation</h1>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Category Name</label>
                     <input type="text" class="form-control" name="name" id="exampleFormControlInput1"

@@ -25,5 +25,5 @@ Route::post('/category/create', 'CategoryController@insert');
 Route::get('/category', 'CategoryController@index');
 
 Route::get('/category/{id}/delete', 'CategoryController@destroy');
-Route::get('/category/{id}/edit', 'CategoryController@edit');
-Route::post('/category/{id}/edit', 'CategoryController@update');
+Route::get('/category/{id}/edit', 'CategoryController@edit')->middleware('aware');
+Route::post('/category/{id}/edit', 'CategoryController@update')->middleware('aware');

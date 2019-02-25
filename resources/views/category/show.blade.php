@@ -2,7 +2,7 @@
 @section('title','All Categories')
 @section('content')
     <div class="container">
-        <h1 class="text-primary text-center mt-3">All Categories</h1>
+        <h1 class="text-primary text-center my-3 mb-5">All Categories</h1>
         <table class="table table-bordered">
             <thead class="thead-light">
             <tr>
@@ -30,12 +30,12 @@
                     <td>{{$category->updated_at}}</td>
                     <td>
                         <button class="btn btn-warning btn-sm">
-                            <a class="btn-link text-white" href="{{action('CategoryController@update',$category->id)}}">
-                                Update
+                            <a class="btn-link text-black" href="{{action('CategoryController@update',$category->id)}}">
+                                <i class="fa fa-edit"></i>
                             </a>
                         </button>
                         <a class="btn-link text-white" href="{{action('CategoryController@destroy',$category->id)}}">
-                            <button class="btn btn-danger btn-sm">Delete</button>
+                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
                         </a>
                     </td>
                 </tr>
