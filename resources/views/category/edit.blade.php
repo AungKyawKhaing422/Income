@@ -1,13 +1,12 @@
 @extends('layout.master')
 @section('title','Edit')
 @section('content')
+    @include('layout.nav')
     <div class="container-fluid">
         <div class="col-md-6 offset-3">
             <form method="post" action="{{action('CategoryController@edit',$category->id)}}">
+                @include('layout.errors')
                 {{csrf_field()}}
-                @if(session('status'))
-                    <p class="alert alert-success">{{session('status')}}</p>
-                @endif
                 <h1 class="text-center text-dark my-5">Category Edition</h1>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Category Name</label>

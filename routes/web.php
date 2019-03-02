@@ -19,7 +19,7 @@ Route::get('/logout','Auth\LoginController@logout');
 Route::get('/', 'PageController@home');
 Route::get('/home', 'PageController@home');
 
-Route::get('/category/create', 'CategoryController@create');
+Route::get('/category/create/{parent?}', 'CategoryController@create');
 Route::post('/category/create', 'CategoryController@insert');
 
 Route::get('/category', 'CategoryController@index');

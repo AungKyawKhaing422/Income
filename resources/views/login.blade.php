@@ -3,11 +3,12 @@
 @section('title','Login')
 
 @section('content')
+    @include('layout.nav')
     <div class="container-fluid">
         <div class="col-md-6 offset-3">
-            @include('layout.errors')
             <h1 class="text-center my-5 text-primary">Login Here</h1>
             <form method="post" action="{{url('/login')}}">
+                @include('layout.errors')
                 {{csrf_field()}}
                 <div class="form-group">
                     <label for="exampleInputEmail1">User Name</label>
